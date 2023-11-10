@@ -37,34 +37,42 @@ for index, row in df.iterrows():
     # buscar la URL del portal
     try:
         portal = driver.find_element(By.XPATH, '//*[@id="rso"]/div[1]/div/div/div/div/div/div/div/div[1]/a')
+        #portal = driver.find_element(By.XPATH, '//*[@id="rso"]/div[1]/div/div/div/div/div/div/div/div[1]/span/a')
         url_portal = portal.get_attribute('href')
     except NoSuchElementException:
         try:
             portal = driver.find_element(By.XPATH, '//*[@id="rso"]/div[1]/div/div/div[1]/div/a')
+            #portal = driver.find_element(By.XPATH, '//*[@id="rso"]/div[1]/div/div/div[1]/div/span/a')
             url_portal = portal.get_attribute('href')
         except NoSuchElementException:
             try:
                 portal = driver.find_element(By.XPATH, '//*[@id="rso"]/div[1]/div/div/div/div[1]/div/a')
+                #portal = driver.find_element(By.XPATH, '//*[@id="rso"]/div[1]/div/div/div/div[1]/div/span/a')
                 url_portal = portal.get_attribute('href')
             except NoSuchElementException:
                 try:
                     portal = driver.find_element(By.XPATH, '//*[@id="rso"]/div[1]/div/div/div[1]/div/div/div[1]/div/a')
+                    #portal = driver.find_element(By.XPATH, '//*[@id="rso"]/div[1]/div/div/div[1]/div/div/div[1]/div/span/a')
                     url_portal = portal.get_attribute('href')
                 except NoSuchElementException:
                     try:
                         portal = driver.find_element(By.XPATH, '//*[@id="rso"]/div[2]/div/div/div[1]/div/a')
+                        #portal = driver.find_element(By.XPATH, '//*[@id="rso"]/div[2]/div/div/div[1]/div/span/a')
                         url_portal = portal.get_attribute('href')
                     except NoSuchElementException:
                         try:
                             portal = driver.find_element(By.XPATH, '//*[@id="rso"]/div[1]/div/div/div/div[2]/ul/li/div/div/div/div[1]/div/a')
+                            #portal = driver.find_element(By.XPATH, '//*[@id="rso"]/div[1]/div/div/div/div[2]/ul/li/div/div/div/div[1]/div/span/a')
                             url_portal = portal.get_attribute('href')
                         except NoSuchElementException:
                             try:
                                 portal = driver.find_element(By.XPATH, '//*[@id="rso"]/div[1]/div/div/div/div[2]/ul/li/div/div/div/div[1]/div/a')
+                                #portal = driver.find_element(By.XPATH, '//*[@id="rso"]/div[1]/div/div/div/div[2]/ul/li/div/div/div/div[1]/div/span/a')
                                 url_portal = portal.get_attribute('href')
                             except NoSuchElementException:
                                 try:
                                     portal = driver.find_element(By.XPATH, '//*[@id="rso"]/div[1]/div/div/div/div[1]/div/div/div[1]/div/a')
+                                    #portal = driver.find_element(By.XPATH, '//*[@id="rso"]/div[1]/div/div/div/div[1]/div/div/div[1]/div/span/a')
                                     url_portal = portal.get_attribute('href')
                                 except NoSuchElementException as e:
                                     url_portal = None
